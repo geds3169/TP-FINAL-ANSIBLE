@@ -238,7 +238,9 @@ Création d'un playboook pour l'installation de apache (httpd) apache.yml
         name: epel
         description: EPEL YUM repo
         baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
-
+      state: present
+      enable: yes
+      
     - name: "Installation firewalld if not present"
       yum:
          name: firewalld
